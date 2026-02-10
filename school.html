@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>School Courses</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+
+/* Show Selected Class */
+function showClass(classId) {
+    document.getElementById("class9").style.display = "none";
+    document.getElementById("class10").style.display = "none";
+
+    document.getElementById(classId).style.display = "block";
+}
+
+/* Subject Tabs */
+function openSubject(subjectId) {
+    let contents = document.querySelectorAll(".tab-content");
+    contents.forEach(c => c.style.display = "none");
+
+    document.getElementById(subjectId).style.display = "block";
+}
+
+/* Chapter Dropdown */
+function toggleChapter(id) {
+    let content = document.getElementById(id);
+
+    if (content.style.display === "block")
+        content.style.display = "none";
+    else
+        content.style.display = "block";
+}
+
+</script>
+
+</head>
+
+<body onload="showClass('class9')">
+
+<header>
+<h1>School Courses</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="school.html">School</a>
+    <a href="competitive.html">Competitive Exams</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    </nav>
+
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+<h3>Classes</h3>
+
+<a onclick="showClass('class9')">Class 9</a>
+<a onclick="showClass('class10')">Class 10</a>
+
+</div>
+
+<!-- Content -->
+<div class="content">
+
+<!-- ================= CLASS 9 ================= -->
+
+<div id="class9">
+
+<h2>Class 9</h2>
+
+<div class="tabs">
+<button onclick="openSubject('math9')">Mathematics</button>
+<button onclick="openSubject('science9')">Science</button>
+</div>
+
+<!-- Maths -->
+<div id="math9" class="tab-content">
+
+<div class="chapter">
+<button onclick="toggleChapter('math9ch1')">Chapter 1: Number System</button>
+
+<div id="math9ch1" class="chapter-content">
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+<p><a href="#">Download Notes</a></p>
+<p><a href="#">Start Test</a></p>
+
+</div>
+</div>
+
+<div class="chapter">
+<button onclick="toggleChapter('math9ch1')">Chapter 1: Number System</button>
+
+<div id="math9ch1" class="chapter-content">
+
+<iframe src="VIDEO LINK"></iframe>
+
+<p><a href="#">Download Notes</a></p>
+<p><a href="#">Start Test</a></p>
+
+</div>
+</div>
+
+</div>
+
+<!-- Science -->
+<div id="science9" class="tab-content">
+
+<div class="chapter">
+<button onclick="toggleChapter('science9ch1')">Chapter 1: Matter in Our Surroundings</button>
+
+<div id="science9ch1" class="chapter-content">
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+<p><a href="#">Download Notes</a></p>
+<p><a href="#">Start Test</a></p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= CLASS 10 ================= -->
+
+<div id="class10" style="display:none;">
+
+<h2>Class 10</h2>
+
+<div class="tabs">
+<button onclick="openSubject('math10')">Mathematics</button>
+<button onclick="openSubject('science10')">Science</button>
+</div>
+
+<!-- Maths -->
+<div id="math10" class="tab-content">
+
+<div class="chapter">
+<button onclick="toggleChapter('math10ch1')">Chapter 1: Real Numbers</button>
+
+<div id="math10ch1" class="chapter-content">
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+<p><a href="#">Download Notes</a></p>
+<p><a href="#">Start Test</a></p>
+
+</div>
+</div>
+
+</div>
+
+<!-- Science -->
+<div id="science10" class="tab-content">
+
+<div class="chapter">
+<button onclick="toggleChapter('science10ch1')">Chapter 1: Chemical Reactions</button>
+
+<div id="science10ch1" class="chapter-content">
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+<p><a href="#">Download Notes</a></p>
+<p><a href="#">Start Test</a></p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 E-Learning Platform</p>
+</footer>
+
+</body>
+</html>
